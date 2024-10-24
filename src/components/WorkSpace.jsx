@@ -5,7 +5,7 @@ import Personal from './Personal';
 
 export default function WorkSpace(props) {
   return (
-    <>
+    <div className="update-fields">
       <Card>
         <button>
           <i className="fa-regular fa-file-lines"></i> Content
@@ -24,6 +24,6 @@ export default function WorkSpace(props) {
         experiences={props.experiences}
         setExperiences={props.setExperience}
       />
-    </>
+    </div>
   );
 }

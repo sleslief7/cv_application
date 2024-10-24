@@ -6,17 +6,19 @@ export default function Resume({
   personal = exampleData.personal,
 }) {
   return (
-    <>
+    <div className="resume">
       <div className="personal-info">
         <h1 className="resume-name">{personal.name}</h1>
-        <div>
+        <div className="contact-info">
           <span className="resume-email">
             <i className="fa-solid fa-envelope"></i> {personal.email}
           </span>
           <span className="resume-phone-number">
             <i className="fa-solid fa-phone"></i> {personal.phoneNumber}
           </span>
-          <span className="resume-address"></span>
+          <span className="resume-address">
+            <i className="fa-solid fa-location-dot"></i> {personal.address}
+          </span>
         </div>
       </div>
       <div className="education-section">
@@ -49,7 +51,7 @@ export default function Resume({
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }
 
@@ -74,7 +76,9 @@ function Section({
           <strong>{descriptionHeader}</strong>
         </p>
         <p className="small-description">{smallDescription}</p>
-        {descriptionText && <p>{descriptionText}</p>}
+        {descriptionText && (
+          <p className="description-text">{descriptionText}</p>
+        )}
       </div>
     </div>
   );

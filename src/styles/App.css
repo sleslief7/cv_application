@@ -1,0 +1,40 @@
+:root {
+  --first-color: rgb(52, 74, 116);
+}
+.app-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.update-fields {
+  width: 35%;
+}
+.update-fields,
+.resume {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+}
+
+.description {
+  text-align: center;
+}
+.description-text {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.personal-info {
+  padding: 15px 30px;
+  background-color: var(--first-color);
+  color: white;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
