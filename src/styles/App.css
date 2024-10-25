@@ -1,10 +1,13 @@
 :root {
   --first-color: rgb(52, 74, 116);
+  --second-color: rgb(228, 228, 228);
+  --third-color: rgb(188, 188, 188);
 }
 
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Times New Roman', Times, serif;
 }
 #root {
   padding: 10px;
@@ -21,10 +24,10 @@
   align-items: start;
   gap: 5px;
   border-radius: 6px;
-  padding: 8px;
-  background-color: rgb(228, 228, 228);
-  border: 1px solid rgb(188, 188, 188);
-  box-shadow: 1px 1px 5px 1px rgb(188, 188, 188);
+  padding: 16px;
+  background-color: var(--second-color);
+  border: 1px solid var(--third-color);
+  box-shadow: 1px 1px 5px 1px var(--third-color);
 }
 
 .card div {
@@ -48,6 +51,12 @@
   flex-direction: column;
   gap: 15px;
   text-align: center;
+}
+
+.education {
+  width: 100%;
+  padding: 12px 0px;
+  border-top: 1px solid var(--third-color);
 }
 
 .description {
@@ -84,6 +93,7 @@
 .section-header {
   font-size: 1.7rem;
   padding: 15px;
+  color: var(--first-color);
 }
 
 .section-description {

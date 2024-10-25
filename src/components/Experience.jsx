@@ -23,8 +23,8 @@ export default function Experience({ experiences, setExperiences }) {
     ]);
   };
 
-  const handleDeleteExperience = (experience) => {
-    setExperiences(experiences.filter((e) => e.id !== experience.id));
+  const handleDeleteExperience = (id) => {
+    setExperiences(experiences.filter((e) => e.id !== id));
   };
 
   return (
@@ -83,7 +83,7 @@ export default function Experience({ experiences, setExperiences }) {
                 }
               />
             </div>
-            <button onClick={(e) => handleDeleteExperience(e, experience)}>
+            <button onClick={(e) => handleDeleteExperience(experience.id)}>
               Delete
             </button>
           </div>
