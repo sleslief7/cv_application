@@ -20,10 +20,10 @@ export const exampleData = {
       company: 'LightBulb Inc.',
       position: 'Web developer',
       startDate: '01/2024',
-      endDate: undefined,
+      endDate: 'Present',
       location: 'New York City, US',
       description:
-        'Build efficient and reusable front-end abstractions and systems. Identify and address performance bottlenecks. Participate in design and code reviews. Interact with other team members to incorporate their innovations',
+        'Build efficient and reusable front-end abstractions and systems. Identify and address performance bottlenecks. Participate in design and code reviews. Interact with other team members to incorporate their innovations.',
       id: crypto.randomUUID(),
     },
   ],

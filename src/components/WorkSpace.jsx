@@ -3,9 +3,9 @@ import Education from './Education';
 import Experience from './Experience';
 import Personal from './Personal';
 
-export default function WorkSpace(props) {
+export default function Workspace(props) {
   return (
-    <div className="update-fields">
+    <div id="workspace">
       <Card>
         <button>
           <i className="fa-regular fa-file-lines"></i> Content
@@ -22,7 +22,7 @@ export default function WorkSpace(props) {
       />
       <Experience
         experiences={props.experiences}
-        setExperiences={props.setExperience}
+        setExperiences={props.setExperiences}
       />
     </div>
   );

@@ -1,8 +1,8 @@
 export default function Card({ children, title }) {
   return (
-    <div>
+    <div className="card">
       {title && <h2>{title}</h2>}
-      <div className="card">{children}</div>
+      {children}
     </div>
   );
 }

@@ -1,17 +1,49 @@
 :root {
   --first-color: rgb(52, 74, 116);
 }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+#root {
+  padding: 10px;
+}
 .app-container {
   width: 100%;
   height: auto;
   display: flex;
+  gap: 10px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+  border-radius: 6px;
+  padding: 8px;
+  background-color: rgb(228, 228, 228);
+  border: 1px solid rgb(188, 188, 188);
+  box-shadow: 1px 1px 5px 1px rgb(188, 188, 188);
 }
 
-.update-fields {
+.card div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+}
+
+#workspace {
   width: 35%;
 }
-.update-fields,
-.resume {
+
+#resume {
+  width: 65%;
+}
+
+#workspace,
+#resume {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -19,17 +51,27 @@
 }
 
 .description {
-  text-align: center;
+  text-align: left;
 }
+
 .description-text {
   width: 80%;
-  margin: 0 auto;
+}
+
+.description-header-and-small-description {
+  padding-bottom: 10px;
 }
 
 .personal-info {
   padding: 15px 30px;
   background-color: var(--first-color);
   color: white;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .contact-info {
@@ -37,4 +79,18 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+}
+
+.section-header {
+  font-size: 1.7rem;
+  padding: 15px;
+}
+
+.section-description {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 15px;
+  padding: 15px;
+  font-size: 1.1rem;
 }

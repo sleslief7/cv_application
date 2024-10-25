@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Resume from './Resume';
-import WorkSpace from './WorkSpace';
+import Workspace from './Workspace';
 import { exampleData } from '../assets/exampleData';
 import '../styles/App.css';
 
@@ -11,7 +11,7 @@ export default function App() {
 
   return (
     <div className="app-container">
-      <WorkSpace
+      <Workspace
         personal={personal}
         setPersonal={setPersonal}
         academics={academics}

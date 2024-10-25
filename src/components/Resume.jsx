@@ -1,12 +1,8 @@
 import { exampleData } from '../assets/exampleData';
 
-export default function Resume({
-  academics = exampleData.academics,
-  experiences = exampleData.experiences,
-  personal = exampleData.personal,
-}) {
+export default function Resume({ academics, experiences, personal }) {
   return (
-    <div className="resume">
+    <div id="resume">
       <div className="personal-info">
         <h1 className="resume-name">{personal.name}</h1>
         <div className="contact-info">
@@ -66,16 +62,19 @@ function Section({
   return (
     <div className="section-description">
       <div className="date-and-location">
-        <p>
-          {startDate} - {endDate ? endDate : 'present'}
+        <p className="date">
+          {startDate} - {endDate ? endDate : 'Present'}
         </p>
-        <p>{location}</p>
+        <p className="location">{location}</p>
       </div>
       <div className="description">
-        <p className="description-header">
-          <strong>{descriptionHeader}</strong>
-        </p>
-        <p className="small-description">{smallDescription}</p>
+        <div className="description-header-and-small-description">
+          <p className="description-header">
+            <strong>{descriptionHeader}</strong>
+          </p>
+          <p className="small-description">{smallDescription}</p>
+        </div>
+
         {descriptionText && (
           <p className="description-text">{descriptionText}</p>
         )}
