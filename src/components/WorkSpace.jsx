@@ -1,6 +1,6 @@
 import Card from './Card';
-import Education from './Education';
-import Experience from './Experience';
+import Educations from './Educations';
+import Experience from './Experiences';
 import Personal from './Personal';
 
 export default function Workspace(props) {
@@ -16,7 +16,7 @@ export default function Workspace(props) {
         <button>Load Example</button>
       </Card>
       <Personal personal={props.personal} setPersonal={props.setPersonal} />
-      <Education
+      <Educations
         academics={props.academics}
         setAcademics={props.setAcademics}
       />
