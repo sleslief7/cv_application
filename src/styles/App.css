@@ -1,7 +1,8 @@
 :root {
   --first-color: rgb(52, 74, 116);
-  --second-color: rgb(228, 228, 228);
+  --second-color: rgb(249, 249, 249);
   --third-color: rgb(188, 188, 188);
+  --fourth-color: rgba(188, 188, 188, 0.473);
 }
 
 * {
@@ -13,10 +14,11 @@
   padding: 10px;
 }
 .app-container {
-  width: 100%;
+  width: 97.5vw;
   height: auto;
   display: flex;
   gap: 10px;
+  overflow: hidden;
 }
 .card {
   display: flex;
@@ -51,6 +53,47 @@
   flex-direction: column;
   gap: 15px;
   text-align: center;
+}
+
+.collapse {
+  width: 95%;
+  border-radius: 6px;
+  border: 1px solid var(--fourth-color);
+  box-shadow: 1px 1px 2px 1px var(--fourth-color);
+}
+
+.collapse-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+  padding: 6px;
+}
+
+.collapse h4 {
+  padding: 8px 0;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 1px solid var(--fourth-color);
+}
+
+.collapsed h4 {
+  border: 0px;
+}
+
+.collapse h4:hover {
+  border-radius: 6px 6px 0 0;
+  background-color: rgb(245, 245, 245);
+}
+
+.collapsed h4:hover {
+  border-radius: 6px;
+}
+
+hr {
+  width: 100%;
+  border-color: var(--fourth-color);
 }
 
 .education {

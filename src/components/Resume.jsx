@@ -4,7 +4,7 @@ export default function Resume({ academics, experiences, personal }) {
   return (
     <div id="resume">
       <div className="personal-info">
-        <h1 className="resume-name">{personal.name}</h1>
+        <h1 className="resume-name">{personal.name || 'Jane Doe'}</h1>
         <div className="contact-info">
           <span className="resume-email">
             <i className="fa-solid fa-envelope"></i> {personal.email}
@@ -63,7 +63,7 @@ function Section({
     <div className="section-description">
       <div className="date-and-location">
         <p className="date">
-          {startDate} - {endDate ? endDate : 'Present'}
+          {startDate && `${startDate} - ${endDate || 'Present'}`}
         </p>
         <p className="location">{location}</p>
       </div>

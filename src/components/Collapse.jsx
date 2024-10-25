@@ -7,9 +7,9 @@ export default function Collapse({
 }) {
   const isSelected = selectedId === id;
   return (
-    <div key={id}>
+    <div className={`collapse ${!isSelected ? 'collapsed' : ''}`} key={id}>
       <h4 onClick={() => setSelectedId(isSelected ? null : id)}>{header}</h4>
-      {isSelected && children}
+      {isSelected && <div className="collapse-content">{children}</div>}
     </div>
   );
 }

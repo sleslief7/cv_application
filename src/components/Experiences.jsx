@@ -96,7 +96,7 @@ function Experience({ experience, setExperience, handleDeleteExperience }) {
           id={`${experience.id}-description`}
           name="description"
           maxLength={300}
-          cols={50}
+          cols={40}
           rows={5}
           value={experience.description}
           onChange={(e) =>
