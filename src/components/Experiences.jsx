@@ -1,9 +1,9 @@
 import Input from './Input';
-import Card from './Card';
 import Collapse from './Collapse';
 import { useState } from 'react';
 
 export default function Experiences({ experiences, setExperiences }) {
+  const [openId, setOpenId] = useState('experiences');
   const [selectedExperienceId, setSelectedExperienceId] = useState(null);
 
   const setExperience = (experience) => {
@@ -32,7 +32,13 @@ export default function Experiences({ experiences, setExperiences }) {
   };
 
   return (
-    <Card title="Experiences">
+    <Collapse
+      id="experiences"
+      header="Experiences"
+      selectedId={openId}
+      setSelectedId={setOpenId}
+      bigHeader
+    >
       {experiences.map((experience, i) => {
         return (
           <Collapse
@@ -51,7 +57,7 @@ export default function Experiences({ experiences, setExperiences }) {
         );
       })}
       <button onClick={handleAddExperience}>Add experience</button>
-    </Card>
+    </Collapse>
   );
 }
 

@@ -1,9 +1,17 @@
 import Input from './Input';
-import Card from './Card';
+import { useState } from 'react';
+import Collapse from './Collapse';
 
 export default function Personal({ personal, setPersonal }) {
+  const [openId, setOpenId] = useState('personal');
   return (
-    <Card title="Personal Details">
+    <Collapse
+      id="personal"
+      header="Personal Details"
+      selectedId={openId}
+      setSelectedId={setOpenId}
+      bigHeader
+    >
       <Input
         label="Full Name"
         id="name"
@@ -30,6 +38,6 @@ export default function Personal({ personal, setPersonal }) {
         value={personal.address}
         setValue={(v) => setPersonal({ ...personal, address: v })}
       />
-    </Card>
+    </Collapse>
   );
 }

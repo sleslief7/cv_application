@@ -1,4 +1,3 @@
-import Card from './Card';
 import Educations from './Educations';
 import Experience from './Experiences';
 import Personal from './Personal';
@@ -7,7 +6,7 @@ import { exampleData } from '../assets/exampleData';
 export default function Workspace(props) {
   return (
     <div id="workspace">
-      <Card>
+      <div>
         <p
           id="clear-resume"
           onClick={() =>
@@ -23,7 +22,7 @@ export default function Workspace(props) {
         <button id="load-example" onClick={handleResumeLoadExample}>
           Load Example
         </button>
-      </Card>
+      </div>
       <Personal personal={props.personal} setPersonal={props.setPersonal} />
       <Educations
         academics={props.academics}

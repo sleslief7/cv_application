@@ -20,24 +20,6 @@
   gap: 10px;
   overflow: hidden;
 }
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 5px;
-  border-radius: 6px;
-  padding: 16px;
-  background-color: var(--second-color);
-  border: 1px solid var(--third-color);
-  box-shadow: 1px 1px 5px 1px var(--third-color);
-}
-
-.card div {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 5px;
-}
 
 #workspace {
   width: 35%;
@@ -56,7 +38,7 @@
 }
 
 .collapse {
-  width: 95%;
+  width: 97.5%;
   border-radius: 6px;
   border: 1px solid var(--fourth-color);
   box-shadow: 1px 1px 2px 1px var(--fourth-color);
@@ -70,7 +52,7 @@
   padding: 6px;
 }
 
-.collapse h4 {
+.collapse .collapse-header {
   padding: 8px 0;
   width: 100%;
   cursor: pointer;
@@ -78,17 +60,21 @@
   border-bottom: 1px solid var(--fourth-color);
 }
 
-.collapsed h4 {
+.collapsed .collapse-header {
   border: 0px;
 }
 
-.collapse h4:hover {
+.collapse .collapse-header:hover {
   border-radius: 6px 6px 0 0;
   background-color: rgb(245, 245, 245);
 }
 
-.collapsed h4:hover {
+.collapsed .collapse-header:hover {
   border-radius: 6px;
+}
+
+.big-header {
+  font-size: 1.6rem;
 }
 
 hr {

@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import Collapse from './Collapse';
-import Card from './Card';
 import Input from './Input';
 
 export default function Educations({ academics, setAcademics }) {
+  const [openId, setOpenId] = useState(null);
   const [selectedEducationId, setSelectedEducationId] = useState(null);
 
   const setAcademic = (academic) => {
@@ -29,7 +29,13 @@ export default function Educations({ academics, setAcademics }) {
   };
 
   return (
-    <Card title="Education">
+    <Collapse
+      id="education"
+      header="Education"
+      selectedId={openId}
+      setSelectedId={setOpenId}
+      bigHeader
+    >
       {academics.map((education, i) => {
         return (
           <Collapse
@@ -48,7 +54,7 @@ export default function Educations({ academics, setAcademics }) {
         );
       })}
       <button onClick={handleAddEducation}>Add education</button>
-    </Card>
+    </Collapse>
   );
 }
 
