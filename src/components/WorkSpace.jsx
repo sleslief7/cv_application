@@ -1,5 +1,5 @@
 import Educations from './Educations.jsx';
-import Experience from './Experiences.jsx';
+import Experiences from './Experiences.jsx';
 import Personal from './Personal.jsx';
 import { exampleData } from '../assets/exampleData.js';
 
@@ -37,7 +37,7 @@ export default function Workspace(props) {
         academics={props.academics}
         setAcademics={props.setAcademics}
       />
-      <Experience
+      <Experiences
         experiences={props.experiences}
         setExperiences={props.setExperiences}
       />
