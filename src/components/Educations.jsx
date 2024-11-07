@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Collapse from './Collapse';
-import Input from './Input';
+import Collapse from './Collapse.jsx';
+import Input from './Input.jsx';
 
 export default function Educations({ academics, setAcademics }) {
   const [openId, setOpenId] = useState(null);

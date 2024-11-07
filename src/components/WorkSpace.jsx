@@ -1,7 +1,7 @@
-import Educations from './Educations';
-import Experience from './Experiences';
-import Personal from './Personal';
-import { exampleData } from '../assets/exampleData';
+import Educations from './Educations.jsx';
+import Experience from './Experiences.jsx';
+import Personal from './Personal.jsx';
+import { exampleData } from '../assets/exampleData.js';
 
 export default function Workspace(props) {
   return (

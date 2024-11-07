@@ -1,5 +1,5 @@
-import Input from './Input';
-import Collapse from './Collapse';
+import Input from './Input.jsx';
+import Collapse from './Collapse.jsx';
 import { useState } from 'react';
 
 export default function Experiences({ experiences, setExperiences }) {

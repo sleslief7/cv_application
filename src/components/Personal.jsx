@@ -1,6 +1,6 @@
-import Input from './Input';
+import Input from './Input.jsx';
 import { useState } from 'react';
-import Collapse from './Collapse';
+import Collapse from './Collapse.jsx';
 
 export default function Personal({ personal, setPersonal }) {
   const [openId, setOpenId] = useState('personal');
