@@ -1,25 +1,26 @@
-import { exampleData } from '../assets/exampleData';
-
 export default function Resume({ academics, experiences, personal }) {
   return (
     <div id="resume">
       <div className="personal-info">
-        <h1 className="resume-name">{personal.name || 'Jane Doe'}</h1>
+        <h1 className="resume-name">{personal.name}</h1>
         <div className="contact-info">
           <span className="resume-email">
-            <i className="fa-solid fa-envelope"></i> {personal.email}
+            {personal.name && <i className="fa-solid fa-envelope"></i>}{' '}
+            {personal.email}
           </span>
           <span className="resume-phone-number">
-            <i className="fa-solid fa-phone"></i> {personal.phoneNumber}
+            {personal.name && <i className="fa-solid fa-phone"></i>}{' '}
+            {personal.phoneNumber}
           </span>
           <span className="resume-address">
-            <i className="fa-solid fa-location-dot"></i> {personal.address}
+            {personal.name && <i className="fa-solid fa-location-dot"></i>}{' '}
+            {personal.address}
           </span>
         </div>
       </div>
       <div className="education-section">
         <h3 className="section-header">Education</h3>
-        {academics.map((section, i) => (
+        {academics.map((section) => (
           <Section
             key={section.id}
             id={section.id}
@@ -34,7 +35,7 @@ export default function Resume({ academics, experiences, personal }) {
       </div>
       <div className="experience-section">
         <h3 className="section-header">Professional Experience</h3>
-        {experiences.map((section, i) => (
+        {experiences.map((section) => (
           <Section
             key={section.id}
             id={section.id}

@@ -56,7 +56,9 @@ export default function Experiences({ experiences, setExperiences }) {
           </Collapse>
         );
       })}
-      <button onClick={handleAddExperience}>Add experience</button>
+      <button className="add-btn" onClick={handleAddExperience}>
+        Add experience
+      </button>
     </Collapse>
   );
 }
@@ -76,41 +78,40 @@ function Experience({ experience, setExperience, handleDeleteExperience }) {
         value={experience.position}
         setValue={(v) => setExperience({ ...experience, position: v })}
       />
-      <div className="dates">
-        <Input
-          label="Start Date"
-          id={`${experience.id}-start-date`}
-          value={experience.startDate}
-          setValue={(v) => setExperience({ ...experience, startDate: v })}
-        />
-        <Input
-          label="End Date"
-          id={`${experience.id}-end-date`}
-          value={experience.endDate}
-          setValue={(v) => setExperience({ ...experience, endDate: v })}
-        />
-      </div>
+      <Input
+        label="Start Date"
+        id={`${experience.id}-start-date`}
+        value={experience.startDate}
+        setValue={(v) => setExperience({ ...experience, startDate: v })}
+      />
+      <Input
+        label="End Date"
+        id={`${experience.id}-end-date`}
+        value={experience.endDate}
+        setValue={(v) => setExperience({ ...experience, endDate: v })}
+      />
       <Input
         label="Location"
         id={`${experience.id}-location`}
         value={experience.location}
         setValue={(v) => setExperience({ ...experience, location: v })}
       />
-      <div>
-        <label htmlFor={`${experience.id}-description`}>Description</label>
-        <textarea
-          id={`${experience.id}-description`}
-          name="description"
-          maxLength={300}
-          cols={40}
-          rows={5}
-          value={experience.description}
-          onChange={(e) =>
-            setExperience({ ...experience, description: e.target.value })
-          }
-        />
-      </div>
-      <button onClick={(e) => handleDeleteExperience(experience.id)}>
+      <label htmlFor={`${experience.id}-description`}>Description</label>
+      <textarea
+        id={`${experience.id}-description`}
+        name="description"
+        maxLength={300}
+        cols={40}
+        rows={5}
+        value={experience.description}
+        onChange={(e) =>
+          setExperience({ ...experience, description: e.target.value })
+        }
+      />
+      <button
+        className="delete-btn"
+        onClick={() => handleDeleteExperience(experience.id)}
+      >
         Delete
       </button>
     </>

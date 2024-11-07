@@ -6,8 +6,8 @@ import { exampleData } from '../assets/exampleData';
 export default function Workspace(props) {
   return (
     <div id="workspace">
-      <div>
-        <p
+      <div id="delete-and-load-resume-container">
+        <button
           id="clear-resume"
           onClick={() =>
             handleClearResume(
@@ -17,9 +17,18 @@ export default function Workspace(props) {
             )
           }
         >
-          <i className="fa-solid fa-trash-can"></i> Clear Resume
-        </p>
-        <button id="load-example" onClick={handleResumeLoadExample}>
+          <i className="fa-solid fa-trash"></i> Clear Resume
+        </button>
+        <button
+          id="load-example"
+          onClick={() =>
+            handleResumeLoadExample(
+              props.setExperiences,
+              props.setAcademics,
+              props.setPersonal
+            )
+          }
+        >
           Load Example
         </button>
       </div>
@@ -70,4 +79,8 @@ function handleClearResume(setExperiences, setAcademics, setPersonal) {
   setPersonal(personal);
 }
 
-function handleResumeLoadExample() {}
+function handleResumeLoadExample(setExperiences, setAcademics, setPersonal) {
+  setExperiences(exampleData.experiences);
+  setAcademics(exampleData.academics);
+  setPersonal(exampleData.personal);
+}

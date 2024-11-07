@@ -53,7 +53,9 @@ export default function Educations({ academics, setAcademics }) {
           </Collapse>
         );
       })}
-      <button onClick={handleAddEducation}>Add education</button>
+      <button className="add-btn" onClick={handleAddEducation}>
+        Add education
+      </button>
     </Collapse>
   );
 }
@@ -91,7 +93,10 @@ function Education({ education, setAcademic, handleDeleteEducation }) {
         value={education.location}
         setValue={(v) => setAcademic({ ...education, location: v })}
       />
-      <button onClick={() => handleDeleteEducation(education.id)}>
+      <button
+        className="delete-btn"
+        onClick={() => handleDeleteEducation(education.id)}
+      >
         Delete
       </button>
     </>

@@ -3,6 +3,7 @@
   --second-color: rgb(249, 249, 249);
   --third-color: rgb(188, 188, 188);
   --fourth-color: rgba(188, 188, 188, 0.473);
+  --fifth-color: brown;
 }
 
 * {
@@ -132,4 +133,91 @@ hr {
   gap: 15px;
   padding: 15px;
   font-size: 1.1rem;
+}
+
+button {
+  padding: 8px 18px;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+#delete-and-load-resume-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+#clear-resume {
+  color: var(--fifth-color);
+  font-size: 1.3rem;
+  display: flex;
+  gap: 10px;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  transition: 0.3s ease-in-out background-color;
+}
+
+#clear-resume:hover {
+  color: var(--second-color);
+  background-color: var(--fifth-color);
+}
+
+#load-example {
+  background-color: var(--first-color);
+  color: var(--second-color);
+  border: 2px solid var(--second-color);
+  transition: 0.3s ease-in-out background-color;
+}
+
+#load-example:hover {
+  color: var(--first-color);
+  background-color: (var(--second-color));
+  border-color: var(--first-color);
+}
+
+.add-btn {
+  font-size: 1rem;
+  padding: 5px 10px;
+  background-color: var(--second-color);
+}
+
+.add-btn:hover {
+  color: var(--second-color);
+  background-color: rgb(83, 104, 83);
+  border: 2px solid var(--second-color);
+}
+
+.delete-btn {
+  font-size: 1rem;
+  padding: 5px 10px;
+  color: var(--fifth-color);
+  border: 2px solid var(--fifth-color);
+  background-color: var(--second-color);
+}
+
+.delete-btn:hover {
+  color: var(--second-color);
+  background-color: var(--fifth-color);
+}
+
+label {
+  font-weight: 900;
+}
+
+textarea {
+  padding: 8px;
+}
+
+@media (max-width: 850px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  #workspace,
+  #resume {
+    width: 100%;
+  }
 }
