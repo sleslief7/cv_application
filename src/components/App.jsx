@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Resume from './Resume.jsx';
-import Workspace from './Workspace.jsx';
+import Workspace from './Workspace';
 import { exampleData } from '../assets/exampleData.js';
 import '../styles/App.css';
 
